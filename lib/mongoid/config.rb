@@ -147,7 +147,7 @@ module Mongoid #:nodoc
     def check_database!(database)
       raise Errors::InvalidDatabase.new(database) unless database.kind_of?(Mongo::DB)
       version = database.connection.server_version
-      raise Errors::UnsupportedVersion.new(version) if version < Mongoid::MONGODB_VERSION
+      #raise Errors::UnsupportedVersion.new(version) if version < Mongoid::MONGODB_VERSION
     end
 
     # Get a Rails logger or stdout logger.
